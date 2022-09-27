@@ -2,7 +2,8 @@ import React from 'react'
 import Nav from 'react-bootstrap/Nav';
 const Navbar = () => {
   return (
-    <Nav
+    <h1>hello</h1>
+  /*   <Nav
     className="justify-content-center"
     activeKey="/home"
     onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
@@ -24,7 +25,7 @@ const Navbar = () => {
     <Nav.Item>
       <Nav.Link  className='text-warning' eventKey="link-4">Contact</Nav.Link>
     </Nav.Item>
-  </Nav>  )
+  </Nav>  */ )
 }
 
 export default Navbar

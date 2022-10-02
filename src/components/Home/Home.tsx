@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { setMoviesList, setLoading, myyallMovies } from "../reducers/MovieListSlice"
+import { setMoviesList, setLoading, myyallMovies } from "../../reducers/MovieListSlice"
 import { useDispatch, useSelector } from "react-redux";
-import { getMoviessFromApi } from "../data/Api"
+import { getMoviessFromApi } from "../../data/Api"
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -18,8 +18,7 @@ const Home = () => {
 
   }, []);
 
-  const { movies, loading } = useSelector(myyallMovies)
-  console.log(myyallMovies)
+  const { movies, loading } = useSelector(myyallMovies) 
   return (
     <>
       <div>Home</div>

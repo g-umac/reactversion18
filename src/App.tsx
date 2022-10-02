@@ -1,28 +1,18 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import './App.css';
-import Home from './components/Home';
+import Home from './components/Home/Home';
+import NavBar from './components/NavBar/NavBar';
 
  
 function App() {
 
-/*  const getData = async () => {
-    const key = "8d5ebbde6faf0389f5535db79b3b891b"
-    const data = await axios(`https://api.themoviedb.org/3/movie/550?api_key=8d5ebbde6faf0389f5535db79b3b891b`);
-    console.log(data.data);
-  }
-  useEffect(() => {
-    getData()
-
-  }, [])  */  
-
   return (
     <div className="App">
-      <header className="App-header">
-        
+      
+        <NavBar/>
         <Home/>
-       </header>
-    </div>
+     </div>
   );
 }
 

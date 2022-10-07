@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "@types/es6-promise": "^3.3.0",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "react-scripts": "5.0.1"
   }
 }

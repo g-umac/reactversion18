@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from './components/Home/Home';
 import NavBar from './components/NavBar/NavBar';
@@ -13,8 +15,8 @@ function App() {
         <NavBar /> 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path="/mymovieslist" element={<MyMoviesList />} />
+{/*           <Route path="/movies" element={<Movies />} />
+ */}          <Route path="/mymovieslist" element={<MyMoviesList />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router> 

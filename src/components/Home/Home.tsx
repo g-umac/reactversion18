@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { setMoviesList, setLoading, myyallMovies } from "../../reducers/MovieListSlice"
 import { useDispatch, useSelector } from "react-redux";
 import { getMoviessFromApi } from "../../data/Api"
+import Movies from "../Movies/Movies";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -22,9 +23,9 @@ const Home = () => {
   return (
     <>
       <div>Home</div>
-      {loading ? <div>loading</div> : <div>
-        {movies.homepage}
-      </div>}
+      {loading ? <div>loading</div> :    <Movies  movies={movies}  />
+
+      }
 
     </>)
 }

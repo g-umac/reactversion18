@@ -19,13 +19,11 @@ const Home = () => {
 
   }, []);
 
-  const { movies, loading } = useSelector(myyallMovies) 
+  const { movies, loading } = useSelector(myyallMovies)
   return (
     <>
-      <div>Home</div>
-      {loading ? <div>loading</div> :    <Movies  movies={movies}  />
-
-      }
+      <h1>Movies</h1>
+      {loading ? <div>loading</div> : <Movies movies={movies} />}
 
     </>)
 }

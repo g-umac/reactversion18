@@ -1,8 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import axios from 'axios';
  import { GithubRepo } from '../../interface/GithubRepo.interface';
 
-/* export interface RepoListState {
+  export interface RepoListState {
     allRepoList: GithubRepo[];
     loading: 'idle',
 }
@@ -11,7 +11,7 @@ const initialState: RepoListState = {
     allRepoList: [],
     loading: 'idle',
 }
- */
+ 
  
 const reposAPI=`https://api.github.com/search/repositories?q=stars:>1+language:en&sort=stars&order=desc&type=Repositories`
 export const allrepoSlice = createSlice({
@@ -21,7 +21,7 @@ export const allrepoSlice = createSlice({
       allRepoList: [],
     },
     reducers: {
-      reposLoading(state, action) {
+      reposLoading(state ) {
          if (state.loading === 'idle') {
           state.loading = 'pending'
         }
@@ -39,7 +39,7 @@ export const allrepoSlice = createSlice({
   export const { reposLoading, reposReceived } = allrepoSlice.actions
   
   // Define a thunk that dispatches those action creators
-  export const fetchrepos = () => async (dispatch) => { 
+  export const fetchrepos = () => async (dispatch:any) => { 
     console.log("Fetc")
     dispatch(reposLoading())
     const response = await axios(reposAPI)

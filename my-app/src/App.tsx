@@ -20,7 +20,7 @@ function App() {
       <header className="App-header">
         <h1>hello</h1>
         {loading === "pending" ? <div>loading..</div> : <div>
-          {allRepoList.map((item:GithubRepo) => <div>{item.id} </div>)} </div>}
+          {allRepoList.map((item:GithubRepo) => <div>{item.name} </div>)} </div>}
       </header>
     </div>
   );

@@ -1,6 +1,5 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import { getRepoReducer } from './reducer/gitHubRepoReducers';
-import { useDispatch } from 'react-redux'
+ import { useDispatch } from 'react-redux'
 import  allrepoSlice  from './reducer/allrepoSlice'
 
  

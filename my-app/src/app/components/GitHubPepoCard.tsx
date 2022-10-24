@@ -5,45 +5,47 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-   import { GithubRepo } from '../../interface/GithubRepo.interface'; 
-import { CssBaseline } from '@mui/material';
+import { GithubRepo } from '../../interface/GithubRepo.interface';
+import { Grid } from '@mui/material';
 
 type SingleRepoCardProps = {
-    repoData: GithubRepo;
-  };
-const GitHubPepoCard = ({repoData}:SingleRepoCardProps) => {
-    const {
-        id,
-        owner,
-        name,
-        created_at,
-        description,
-        html_url,
-        homepage,
-        stargazers_count,
-      } = repoData;
-  return ( 
-    
-    <Card sx={{ maxWidth: 345 }} /*  align="center"  */>
-    <CardMedia
-      component="img"
-      height="140"
-      image={`${owner.avatar_url}`}
-      alt="github"
-    />
-    <CardContent>
-      <Typography gutterBottom variant="h5" component="div">
-      {name}
-      </Typography>
-      <Typography variant="body2" color="text.secondary">
-      {description}
-      </Typography>
-    </CardContent>
-    <CardActions>
-      <Button size="small">Share</Button>
-      <Button size="small">Learn More</Button>
-    </CardActions>
-  </Card> 
+  repoData: GithubRepo;
+};
+
+
+const GitHubPepoCard = ({ repoData }: SingleRepoCardProps) => {
+  const {
+    id,
+    owner,
+    name,
+    created_at,
+    description,
+    html_url,
+    homepage,
+    stargazers_count,
+  } = repoData;
+  return (
+    <Grid item lg={3} md={8} xs={2} sm={4} key={id} >
+      <Card>
+        <CardMedia
+          component="img"
+          height="140"
+          image={`${owner.avatar_url}`}
+          alt="github"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {name}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            {description}
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button size="small">Learn More</Button>
+        </CardActions>
+      </Card>
+    </Grid>
   )
 }
 

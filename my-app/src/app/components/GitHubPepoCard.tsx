@@ -25,7 +25,7 @@ const GitHubPepoCard = ({ repoData }: SingleRepoCardProps) => {
     stargazers_count,
   } = repoData;
   return (
-    <Grid item lg={3} md={8} xs={2} sm={4} key={id} >
+    <Grid item lg={3} md={4} xs={12} sm={6} key={id} >
       <Card>
         <CardMedia
           component="img"
